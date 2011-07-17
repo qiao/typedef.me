@@ -7,6 +7,8 @@ class CreateComments < ActiveRecord::Migration
       t.string :user_agent
       t.text :content
 
+      t.references :commentable, :polymorphic => true
+
       t.timestamps
     end
   end

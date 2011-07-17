@@ -6,7 +6,6 @@ class CreateCommentables < ActiveRecord::Migration
       t.boolean :published
       t.string :slug
 
-      t.references :commentable, :polymorphic => true
 
       t.timestamps
     end

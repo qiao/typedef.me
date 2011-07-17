@@ -17,8 +17,6 @@ ActiveRecord::Schema.define(:version => 20110717111100) do
     t.text     "content"
     t.boolean  "published"
     t.string   "slug"
-    t.integer  "commentable_id"
-    t.string   "commentable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -29,6 +27,8 @@ ActiveRecord::Schema.define(:version => 20110717111100) do
     t.string   "author_url"
     t.string   "user_agent"
     t.text     "content"
+    t.integer  "commentable_id"
+    t.string   "commentable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
