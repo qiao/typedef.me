@@ -6,13 +6,16 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to @commentable
     else
-      flash[:error] = @comment.errors.full_messages
-      redirect_to @commentable
+      flash.now[:error] = @comment.errors.full_messages
     end
   end
   
   private
   def find_commentable
-    @commentable = Commentable.find(params[:id])
+    if params[:post_id].nil?
+      @commentable = Page.find(params[:page_id])
+    else
+      @commentable = Post.find(params[:post_id])
+    end
   end
 end
