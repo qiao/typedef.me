@@ -4,11 +4,17 @@ TypedefMe::Application.routes.draw do
 
   match 'login',  :to => 'sessions#new'
   match 'logout', :to => 'sessions#destroy'
+  match 'admin',  :to => 'dashboard#index'
 
   resource :session
 
   resources :posts do
     resources :comments
+  end
+
+  namespace :admin do
+    resource :posts
+    resource :comments
   end
 
   # The priority is based upon order of creation:
