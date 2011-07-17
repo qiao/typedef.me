@@ -1,6 +1,6 @@
 class Comment < ActiveRecord::Base
 
-  :belongs_to :commentables, :polymorphic => true
+  belongs_to :commentables, :polymorphic => true
 
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
