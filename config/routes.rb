@@ -2,6 +2,11 @@ TypedefMe::Application.routes.draw do
 
   root :to => 'pages#home'
 
+  match 'login',  :to => 'sessions#new'
+  match 'logout', :to => 'sessions#destroy'
+
+  resource :session
+
   resources :posts do
     resources :comments
   end
