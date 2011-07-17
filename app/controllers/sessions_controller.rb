@@ -6,7 +6,6 @@ class SessionsController < ApplicationController
   def create
     if params[:session][:password] == '123456' then
       session[:logged_in] = true
-    raise Exception.new(params)
       redirect_to admin_path
     else
       flash[:error] = 'Wrong password'

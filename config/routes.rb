@@ -4,7 +4,7 @@ TypedefMe::Application.routes.draw do
 
   match 'login',  :to => 'sessions#new'
   match 'logout', :to => 'sessions#destroy'
-  match 'admin',  :to => 'dashboard#index'
+  match 'admin',  :to => 'admin/dashboard#index'
 
   resource :session
 
