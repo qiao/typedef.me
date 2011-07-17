@@ -1,0 +1,21 @@
+<%= form_for(@post) do |f| %>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :slug %><br>
+    <%= f.text_field :slug %>
+  </div>
+  <div class="actions">
+    <%= f.label :publish %><br>
+    <%= f.check_box :published %> 
+  </div>
+  <div class="actions">
+    <%= f.submit "Commit" %>
+  </div>
+<% end %>
