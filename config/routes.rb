@@ -16,6 +16,8 @@ TypedefMe::Application.routes.draw do
     get ':year/:month/:day/:slug' => 'posts#show'
   end
 
+  get ':slug' => 'pages#show'
+
   namespace :admin do
     resources :posts
     resources :comments
