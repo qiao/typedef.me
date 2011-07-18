@@ -5,5 +5,10 @@ class Admin::PagesController < Admin::BaseController
 
   def create
     @page = Page.new(params[:page])
+    if @page.save
+      redirect_to @page
+    else
+      render 'new'
+    end
   end
 end
