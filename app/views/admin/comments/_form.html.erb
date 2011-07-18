@@ -1,0 +1,21 @@
+<%= form_for(@path) do |f| %>
+  <div class="field">
+    <%= f.label :author_name %> <br>
+    <%= f.text_field :author_name %>
+  </div>
+  <div class="field">
+    <%= f.label :author_email %> <br>
+    <%= f.text_field :author_email %>
+  </div>
+  <div class="field">
+    <%= f.label :author_url %> <br>
+    <%= f.text_field :author_url %>
+  </div>
+  <div class="field">
+    <%= f.label :content %> <br>
+    <%= f.text_field :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Add' %> 
+  </div>
+<% end %>

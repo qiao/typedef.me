@@ -1,4 +1,4 @@
-class CommentsController < ApplicationController
+class Admin::CommentsController < Admin::BaseController
   before_filter :find_commentable
 
   def create

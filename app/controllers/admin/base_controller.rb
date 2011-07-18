@@ -1,5 +1,5 @@
 class Admin::BaseController < ApplicationController
-  layout 'admin'
+  layout 'dashboard'
 
   before_filter :authenticate
 
