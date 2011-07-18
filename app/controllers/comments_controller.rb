@@ -3,16 +3,18 @@ class CommentsController < ApplicationController
 
   def create
     @comment = @commentable.comments.new(params[:comment])
-    if @comment.save
-      redirect_to @commentable
+    flash.now[:error] = @comment.errors.full_messages unless @comment.save
+    if @type == :page
+      redirect_to page_url(@commentable)
     else
-      flash.now[:error] = @comment.errors.full_messages
+      redirect_to post_url(@commentable)
     end
   end
   
   private
   def find_commentable
-    if params[:post_id].nil?
+    @type = params[:post_id].nil? ? :page : :post
+    if @type == :page
       @commentable = Page.find(params[:page_id])
     else
       @commentable = Post.find(params[:post_id])
