@@ -13,8 +13,9 @@ TypedefMe::Application.routes.draw do
   end
 
   namespace :admin do
-    resource :posts
-    resource :comments
+    resources :posts
+    resources :comments
+    resources :pages
   end
 
   # The priority is based upon order of creation:
