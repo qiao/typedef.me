@@ -1,5 +1,5 @@
 class Admin::DashboardController < Admin::BaseController
-  def index
-    @posts = Post.published
+  def show
+    @posts = Post.all
   end
 end
