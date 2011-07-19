@@ -3,6 +3,7 @@ class CommentsController < ApplicationController
 
   def create
     @comment = @commentable.comments.new(params[:comment])
+    @comment.user_agent = request.user_agent
     flash.now[:error] = @comment.errors.full_messages unless @comment.save
     if @type == :page
       redirect_to page_url(@commentable)
