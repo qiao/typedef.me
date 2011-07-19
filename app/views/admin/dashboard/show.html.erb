@@ -8,7 +8,7 @@
   </tr>
   <% @posts.each do |post| %>
     <tr>
-      <td><%= link_to post.title, post %></td>
+      <td><%= link_to post.title, edit_admin_post_url(post) %></td>
       <td><%= post.comments.count %></td>
       <td><%= post.published %></td>
       <td><%= post.created_at %></td>

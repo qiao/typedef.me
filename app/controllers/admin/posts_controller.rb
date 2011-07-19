@@ -1,7 +1,7 @@
 class Admin::PostsController < Admin::BaseController
+  before_filter :find_post, :only => [:show, :edit, :update, :destroy]
 
   def show
-    @post = Post.find(params[:id])
     @comment = @post.comments.new
     @path = [@post, @comment]
   end
@@ -15,8 +15,30 @@ class Admin::PostsController < Admin::BaseController
     if @post.save
       redirect_to @post
     else
+      flash.now[:error] = 'Publish failed'
       render 'new'
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @post.update_attributes(params[:post])
+      redirect_to @post
+    else
+      flash.now[:error] = 'Update failed'
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @post.destroy
+    redirect_to admin_url
+  end
+
+  private
+  def find_post
+    @post = Post.find(params[:id])
+  end
 end
