@@ -1,1 +1,4 @@
-<%= raw(@page.content) %>
+<%= render @page %>
+
+<%= render @page.comments %>
+<%= render 'comments/form' %>

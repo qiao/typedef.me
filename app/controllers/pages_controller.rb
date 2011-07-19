@@ -5,5 +5,7 @@ class PagesController < ApplicationController
 
   def show
     @page = Page.find_by_slug(params[:slug])
+    @comment = @page.comments.new
+    @path = [@page, @comment]
   end
 end
