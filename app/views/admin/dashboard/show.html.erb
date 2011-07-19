@@ -11,7 +11,7 @@
       <td><%= link_to post.title, edit_admin_post_url(post) %></td>
       <td><%= post.comments.count %></td>
       <td><%= post.published %></td>
-      <td><%= post.created_at %></td>
+      <td><%= post.created_at.in_time_zone 8 %></td>
     </tr>
   <% end %>
 </table>

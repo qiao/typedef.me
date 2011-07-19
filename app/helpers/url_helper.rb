@@ -6,4 +6,8 @@ module UrlHelper
   def page_url(page)
     "/#{page.slug}"
   end
+
+  def commentable_url(commentable)
+    commentable.type == 'Post' ? post_url(commentable) : page_url(commentable)
+  end
 end
