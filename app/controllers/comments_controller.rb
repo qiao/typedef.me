@@ -1,6 +1,9 @@
 class CommentsController < ApplicationController
   before_filter :find_commentable
 
+  def new
+  end
+
   def create
     @comment = @commentable.comments.new(params[:comment])
     @comment.user_agent = request.user_agent
