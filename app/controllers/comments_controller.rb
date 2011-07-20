@@ -1,14 +1,24 @@
 class CommentsController < ApplicationController
   before_filter :find_commentable
 
-  def new
-  end
-
   def create
     @comment = @commentable.comments.new(params[:comment])
     @comment.user_agent = request.user_agent
-    flash.now[:error] = @comment.errors.full_messages unless @comment.save
-    redirect_to commentable_url(@commentable)
+
+    if @comment.save
+      respond_to do |format|
+        format.html { redirect_to @commentable, 
+                      :notice => 'Thanks for your comment' }
+        format.js
+      end
+    else
+      respond_to do |format|
+        format.html { redirect_to @commentable,
+                      :alert => 'Unable to add comment' }
+        format.js
+      end
+    end
+
   end
   
   private

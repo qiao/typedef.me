@@ -1,4 +1,5 @@
-<%= form_for([@commentable, @commentable.comments.new]) do |f| %>
+<%= form_for([@commentable, @commentable.comments.new],
+             :remote => true) do |f| %>
   <div class="field">
     <%= f.label :author_name %> <br>
     <%= f.text_field :author_name %>
