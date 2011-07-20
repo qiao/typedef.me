@@ -1,14 +1,18 @@
 <button id="comments_show_button_<%= post.id %>" 
-  onclick="show_comments_of_post_id(<%= post.id %>);">
+  onclick="show_comments_of_commentable_id(<%= post.id %>);">
   show comments
 </button>
 
-<div id="post_<%= post.id %>_comments" style="display: none;" >
+<div id="commentable_<%= post.id %>_comments" style="display: none;" >
   <%= render post.comments %>
 
   <button id="comments_hide_button_<%= post.id %>"
-    onclick="hide_comments_of_post_id(<%= post.id %>)">
+    onclick="hide_comments_of_commentable_id(<%= post.id %>)">
     hide comments
   </button>
+
+  <div id="commentable_<%= post.id %>_comments" style="display: block;" >
+    <%= render :partial =>'comments/form', :locals => { :commentable => post } %>
+  </div>
 
 </div>

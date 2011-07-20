@@ -1,3 +1,7 @@
 <%= render @post %>
-<%= render @post.comments %>
-<%= render 'comments/form' %>
+
+<div id="commentable_<%= @post.id %>_comments">
+  <%= render @post.comments %>
+</div>
+
+<%= render :partial => 'comments/form', :locals => { :commentable => @post } %>
