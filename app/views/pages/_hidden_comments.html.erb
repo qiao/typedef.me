@@ -1,3 +1,14 @@
-<%= div_for post, :style => 'display: none;' do %>
+<button id="comments_show_button_<%= post.id %>" 
+  onclick="show_comments_of_post_id(<%= post.id %>);">
+  show comments
+</button>
+
+<div id="post_<%= post.id %>_comments" style="display: none;" >
   <%= render post.comments %>
-<% end %>
+
+  <button id="comments_hide_button_<%= post.id %>"
+    onclick="hide_comments_of_post_id(<%= post.id %>)">
+    hide comments
+  </button>
+
+</div>
