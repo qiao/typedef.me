@@ -1,7 +1,9 @@
-<%= render @post %>
+<% div_for post, :class => "round shadow" do %>
+  <%= render @post %>
 
-<div id="commentable_<%= @post.id %>_comments">
-  <%= render @post.comments %>
-</div>
+  <div id="commentable_<%= @post.id %>_comments">
+    <%= render @post.comments %>
+  </div>
 
-<%= render :partial => 'comments/form', :locals => { :commentable => @post } %>
+  <%= render :partial => 'comments/form', :locals => { :commentable => @post } %>
+<% end %>

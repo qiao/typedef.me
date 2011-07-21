@@ -8,11 +8,13 @@
 </head>
 <body>
 
-<%= yield %>
+  <div id="main">
+    <%= yield %>
 
-<% if Rails.env.development? %>
-  <%= debug(params) %>
-<% end %>
+    <% if Rails.env.development? %>
+      <%= debug(params) %>
+    <% end %>
+  </div>
 
 </body>
 </html>

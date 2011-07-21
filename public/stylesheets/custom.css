@@ -1,0 +1,24 @@
+body {
+  background-image: url("/images/background.jpg");
+}
+
+#main {
+  width: 960px;
+  margin: 0px auto; 
+  /*background-color: #fff;
+  padding: 20px;*/
+}
+
+.round {
+  border-radius: 5px;
+}
+
+.shadow {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.post {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 30px;
+}

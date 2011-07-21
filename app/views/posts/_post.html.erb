@@ -1,3 +1,9 @@
-<h3><%= link_to post.title, post_url(post) %></h3>
-<%= raw(post.content) %>
+<div class="post_title">
+  <h3><%= link_to post.title, post_url(post) %></h3>
+</div>
+
+<div class="post_content">
+  <%= raw(post.content) %>
+</div>
+
 <%= post.slug %>

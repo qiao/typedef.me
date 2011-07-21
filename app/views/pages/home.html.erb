@@ -1,7 +1,9 @@
 <h1>Pages#home</h1>
 <% for post in @posts %>
-  <%= div_for post do %>
+
+  <%= div_for post, :class => "round shadow" do %>
     <%= render post %>
     <%= render :partial => 'comments/hidden_comments', :locals => { :post => post } %>
+
   <% end %>
 <% end %>
