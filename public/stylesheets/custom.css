@@ -3,22 +3,50 @@ body {
 }
 
 #main {
-  width: 960px;
-  margin: 0px auto; 
+  width: 740px;
+  margin: 0 auto; 
   /*background-color: #fff;
   padding: 20px;*/
 }
 
-.round {
-  border-radius: 5px;
-}
-
-.shadow {
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-
 .post {
-  background-color: #fff;
-  padding: 20px;
   margin-top: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  padding-bottom: 20px;
+}
+
+.post_title {
+  background: #555;
+  padding: 5px 20px 0;
+  border-radius: 5px 5px 0 0;
+}
+
+.post_info {
+  margin-top: 2px;
+  color: #ddd;
+  font-size: 75%;
+}
+
+.post_content {
+  border-radius: 0 0 5px 5px;
+  padding: 20px;
+}
+
+.post_title a {
+  text-decoration: none;
+  color: #ddd;
+}
+
+.post_title a:hover {
+  color: #fff;
+}
+
+.comments_list {
+  padding: 0 20px 10px;
+}
+
+h2 {
+  margin: 0;
 }

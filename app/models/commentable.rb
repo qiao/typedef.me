@@ -8,4 +8,8 @@ class Commentable < ActiveRecord::Base
   
   scope :published, where(:published => true)
   scope :draft, where(:published => false)
+
+  def published_at
+    created_at.in_time_zone(8)
+  end
 end

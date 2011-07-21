@@ -3,7 +3,7 @@
   show comments
 </button>
 
-<div id="comments_list_<%= post.id %>" style="display: none;" >
+<div id="comments_list_<%= post.id %>" class="comments_list" style="display: none;" >
 
   <div id="comments_content_<%= post.id %>">
     <%= render post.comments %>
@@ -19,4 +19,3 @@
   </div>
 
 </div>
-
