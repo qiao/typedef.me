@@ -1,20 +1,17 @@
 <%= form_for([commentable, commentable.comments.new],
-             :remote => true) do |f| %>
+             :remote => true, 
+             :html => { :id => "new_comment_#{commentable.id}" }) do |f| %>
   <div class="field">
-    <%= f.label :author_name %> <br>
-    <%= f.text_field :author_name %>
+    <%= f.text_field :author_name, :placeholder => "Name (required)" %>
   </div>
   <div class="field">
-    <%= f.label :author_email %> <br>
-    <%= f.text_field :author_email %>
+    <%= f.text_field :author_email, :placeholder => "Email (required)" %>
   </div>
   <div class="field">
-    <%= f.label :author_url %> <br>
-    <%= f.text_field :author_url %>
+    <%= f.text_field :author_url, :placeholder => "Website" %>
   </div>
   <div class="field">
-    <%= f.label :content %> <br>
-    <%= f.text_field :content %>
+    <%= f.text_area :content %>
   </div>
   <div class="actions">
     <%= f.submit 'Add' %> 

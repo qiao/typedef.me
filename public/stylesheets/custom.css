@@ -2,6 +2,25 @@ body {
   background-image: url("/images/background.jpg");
 }
 
+h2 {
+  margin: 0;
+}
+
+input, textarea {
+  border: 1px solid #ddd;
+}
+
+textarea {
+  width: 98%;
+  height: 100px;
+}
+
+input:focus, textarea:focus {
+  border: 1px solid rgba(51, 102, 153, 0.6);
+  box-shadow: 0 0 5px rgba(51, 102, 153, 0.6);
+}
+
+
 #main {
   width: 740px;
   margin: 0 auto; 
@@ -59,6 +78,6 @@ body {
   color: #47a;
 } 
 
-h2 {
-  margin: 0;
+.field {
+  padding: 3px 0 3px;
 }

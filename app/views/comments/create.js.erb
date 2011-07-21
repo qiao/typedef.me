@@ -1,2 +1,2 @@
 $("#comments_content_<%= @commentable.id %>").append("<%= escape_javascript(render(@comment)) %>");
-$("#new_comment")[0].reset();
+$("#new_comment_<%= @commentable.id %>")[0].reset();
