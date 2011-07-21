@@ -3,8 +3,11 @@
   show comments
 </button>
 
-<div id="commentable_<%= post.id %>_comments" style="display: none;" >
-  <%= render post.comments %>
+<div id="comments_list_<%= post.id %>" style="display: none;" >
+
+  <div id="comments_content_<%= post.id %>">
+    <%= render post.comments %>
+  </div>
 
   <button id="comments_hide_button_<%= post.id %>"
     onclick="hide_comments_of_commentable_id(<%= post.id %>)">
@@ -16,3 +19,4 @@
   </div>
 
 </div>
+

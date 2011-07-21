@@ -1,5 +1,7 @@
 <h1>Pages#home</h1>
 <% for post in @posts %>
-  <%= render post %>
-  <%= render :partial => 'hidden_comments', :locals => { :post => post } %>
+  <%= div_for post do %>
+    <%= render post %>
+    <%= render :partial => 'comments/hidden_comments', :locals => { :post => post } %>
+  <% end %>
 <% end %>
