@@ -10,11 +10,13 @@
 
 <div id="comments_list_<%= post.id %>" class="comments_list" style="display: none;" >
 
-  <div id="comments_content_<%= post.id %>">
-    <%= render post.comments %>
-  </div>
+  <!-- TODO: use ul>li for comments-->
+  <ol>
+      <%= render post.comments %>
+  </ol>
 
-  <div id="commentable_<%= post.id %>_comments" style="display: block;" >
+  <!-- TODO: Fix div id -->
+  <div id="commentable_<%= post.id %>_comments">
     <%= render :partial =>'comments/form', :locals => { :commentable => post } %>
   </div>
 
