@@ -9,3 +9,10 @@ function hide_comments_of_commentable_id(id) {
   $("#comments_hide_link_" + id).hide();
   $("#comments_show_link_" + id).fadeIn();
 }
+
+window.onload = function() {
+  $("img").lazyload({ 
+    threshold : 200,
+    effect: "fadeIn"
+  });
+};
