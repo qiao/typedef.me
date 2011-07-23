@@ -10,7 +10,7 @@ namespace :db do
                    :slug      => Faker::Lorem.words(2).join)
     end
 
-    5.times do |n|
+    2.times do |n|
       Page.create!(:title     => Faker::Lorem.words.join(' '),
                    :content   => Faker::Lorem.paragraphs(5).join,
                    :published => true,
@@ -18,7 +18,7 @@ namespace :db do
     end
 
     100.times do |n|
-      comment = Commentable.find(rand(25) + 1).comments.new
+      comment = Commentable.find(rand(22) + 1).comments.new
       comment.update_attributes(:author_name  => Faker::Name.name,
                                 :author_email => Faker::Internet.email,
                                 :author_url   => Faker::Internet.domain_name,
