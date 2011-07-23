@@ -9,11 +9,10 @@
 </span>
 
 <div id="comments_<%= post.id %>" class="comments" style="display: none;">
-  <div class="comments_list">
 
-    <%= render :partial => 'comments/comments', 
-               :locals => { :comments => post.comments } %>
-  </div>
+  <%= render :partial => 'comments/comments', 
+             :locals => { :comments => post.comments,
+                          :commentable_id => post.id } %>
 
     <%= render :partial =>'comments/form', :locals => { :commentable => post } %>
 </div>

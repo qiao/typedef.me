@@ -2,9 +2,9 @@
   <%= render @post %>
 
   <div class="comments">
-    <div class="comments_list">
-      <%= render @post.comments %>
-    </div>
+    <%= render :partial => 'comments/comments',
+               :locals => { :comments => @post.comments,
+                            :commentable_id => @post.id } %>
 
     <%= render :partial => 'comments/form', :locals => { :commentable => @post } %>
   </div>
