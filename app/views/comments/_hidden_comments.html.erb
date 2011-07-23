@@ -8,14 +8,12 @@
   hide comments
 </span>
 
-<div id="comments_list_<%= post.id %>" class="comments_list" style="display: none;" >
+<div id="comments_<%= post.id %>" class="comments" style="display: none;">
+  <div class="comments_list">
 
-  <%= render :partial => 'comments/comments', 
-             :locals => { :comments => post.comments } %>
-
-  <!-- TODO: Fix div id -->
-  <div id="commentable_<%= post.id %>_comments">
-    <%= render :partial =>'comments/form', :locals => { :commentable => post } %>
+    <%= render :partial => 'comments/comments', 
+               :locals => { :comments => post.comments } %>
   </div>
 
+    <%= render :partial =>'comments/form', :locals => { :commentable => post } %>
 </div>
