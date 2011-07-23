@@ -21,6 +21,7 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #fff;
   color: #345;
+  cursor: pointer;
 }
 
 textarea {
@@ -33,7 +34,6 @@ input[type="text"]:focus, textarea:focus {
   box-shadow: 0 0 5px rgba(51, 102, 153, 0.6);
   outline: medium none;
 }
-
 
 #main {
   width: 740px;
@@ -93,16 +93,39 @@ input[type="text"]:focus, textarea:focus {
 
 .comment {
   border-bottom: 1px solid #ccc;
+  padding: 5px 0;
 }
 
 .gravatar {
+  width: 80px;
   float: left;
 }
 
 .comment_content {
+  width: 600px;
   float: left;
 }
 
 .field {
   padding: 3px 0 3px;
+}
+
+.clear {
+  clear: both;
+}
+
+.comments_list ol {
+  padding-left: 0;
+}
+
+.comments_list li {
+  list-style-type: none;
+}
+
+.new_comment {
+  padding-left: 20px;
+}
+
+.comment_author a {
+  color: #36a;
 }

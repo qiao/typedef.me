@@ -1,7 +1,7 @@
-<% div_for post, :class => "round shadow" do %>
+<% div_for @post, :class => "round shadow" do %>
   <%= render @post %>
 
-  <div id="commentable_<%= @post.id %>_comments">
+  <div class="comments_list">
     <%= render @post.comments %>
   </div>
 

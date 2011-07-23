@@ -1,5 +1,19 @@
 <li>
   <%= div_for comment do %>
-    <%= comment.content %>
+    <div class="gravatar">
+      icon
+      <div class="comment_author">
+        <% if comment.author_url %>
+          <%= link_to comment.author_name, comment.author_url %>
+        <% else %>
+          <%= comment.author_name %>
+        <% end %>
+      </div>
+    </div>
+    <div class="comment_content">
+      <%= comment.content %>
+      on <%= publish_time(comment) %>
+    </div>
+    <div class="clear"></div>
   <% end %>
 </li>
