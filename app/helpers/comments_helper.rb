@@ -7,6 +7,7 @@ module CommentsHelper
     gravatar_image_tag(comment.author_email.downcase, 
                        :alt => comment.author_name,
                        :class => "gravatar_image",
-                       :gravatar => { :size => 32 })
+                       :gravatar => { :default => :mm,
+                                      :size => 32 })
   end
 end

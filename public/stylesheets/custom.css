@@ -152,7 +152,8 @@ input[type="text"]:focus, textarea:focus {
 
 .gravatar_image {
   border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3)
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  size: 32px;
 }
 
 .comment_content {
@@ -178,7 +179,7 @@ input[type="text"]:focus, textarea:focus {
 
 .comment_author a {
   color: #36a;
-  font-size: 80%;
+  font-size: 75%;
   text-decoration: none;
 }
 
