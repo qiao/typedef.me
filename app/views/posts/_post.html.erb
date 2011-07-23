@@ -1,9 +1,10 @@
 <div class="post_title">
   <h2><%= link_to post.title, post_url(post) %></h2>
 
-  <div class="post_info">
-    <%= post.published_at.strftime("%Y-%m-%d %X") %>
-  </div>
+</div>
+
+<div class="post_info">
+  Posted on <%= post.published_at.strftime("%Y-%m-%d %X") %>
 </div>
 
 <div class="post_content">
