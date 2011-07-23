@@ -7,6 +7,9 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+  <header>
+    <h1><%= link_to title, root_url %></h1>
+  </header>
 
   <div id="main">
     <%= yield %>
