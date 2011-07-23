@@ -11,8 +11,7 @@ function hide_comments_of_commentable_id(id) {
 }
 
 window.onload = function() {
-  $("img").lazyload({ 
-    threshold : 200,
-    effect: "fadeIn"
-  });
-};
+  $("img").lazyload({
+    //effect: "fadeIn"
+  })
+}  
