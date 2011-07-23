@@ -1,13 +1,13 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.9'
+gem 'rake', '0.9.2'
+gem 'sqlite3'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-
-gem 'rake', '0.9.2'
+gem 'gravatar_image_tag'
 
 group :development do
   gem 'faker'

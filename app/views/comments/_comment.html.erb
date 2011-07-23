@@ -1,7 +1,7 @@
 <li>
   <%= div_for comment do %>
     <div class="gravatar">
-      icon
+      <%= gravatar_for comment %>
       <div class="comment_author">
         <% if comment.author_url %>
           <%= link_to comment.author_name, comment.author_url %>
