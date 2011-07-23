@@ -10,8 +10,10 @@ function hide_comments_of_commentable_id(id) {
   $("#comments_show_link_" + id).fadeIn();
 }
 
+/*
 window.onload = function() {
   $("img").lazyload({
     //effect: "fadeIn"
   })
 }  
+*/
