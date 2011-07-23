@@ -11,8 +11,10 @@
       </div>
     </div>
     <div class="comment_content">
+      <div class="comment_info">
+        <%= publish_time(comment) %>
+      </div>
       <%= comment.content %>
-      on <%= publish_time(comment) %>
     </div>
     <div class="clear"></div>
   <% end %>

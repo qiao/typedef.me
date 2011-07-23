@@ -111,7 +111,7 @@ input[type="text"]:focus, textarea:focus {
 }
 
 .gravatar {
-  width: 80px;
+  width: 100px;
   float: left;
 }
 
@@ -138,4 +138,9 @@ input[type="text"]:focus, textarea:focus {
 
 .comment_author a {
   color: #36a;
+}
+
+.comment_info {
+  font-size: 75%;
+  color: #777;
 }
