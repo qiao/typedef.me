@@ -221,15 +221,19 @@ input[type="text"]:focus, textarea:focus {
 .pagination a, .pagination em, .disabled {
   padding: 1px 5px;
   margin: 0 3px;
-  background: #777;
+  background: #fff;
   border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
   text-decoration: none;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  color: #ddd;
+  color: #333;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  font-size: 12px;
 }
 
 .pagination em {
+  color: #fff;
   background: #555;
+  border: 1px solid #555;
 }
 
 .disabled {
@@ -238,6 +242,7 @@ input[type="text"]:focus, textarea:focus {
 
 .pagination a:hover {
   color: #fff;
+  background: #555;
 }
 
 .underline {

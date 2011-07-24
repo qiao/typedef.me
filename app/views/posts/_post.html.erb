@@ -8,7 +8,7 @@
   </div>
   <% unless post.tag_list.empty? %>
     <div class="post_tags">
-      tags: 
+      Tags: 
       <% for post_tag in post.tag_list %>
         <div class="post_tag">
           <%= link_to post_tag, "/tag/#{post_tag}" %>
