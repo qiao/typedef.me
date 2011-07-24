@@ -28,9 +28,9 @@ GEM
       activemodel (= 3.0.9)
       activesupport (= 3.0.9)
     activesupport (3.0.9)
+    acts-as-taggable-on (2.0.6)
     arel (2.0.10)
     builder (2.1.2)
-    coderay (0.9.8)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     faker (0.9.5)
@@ -76,7 +76,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  coderay
+  acts-as-taggable-on
   faker
   gravatar_image_tag
   rails (= 3.0.9)

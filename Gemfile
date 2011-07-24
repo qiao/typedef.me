@@ -8,6 +8,7 @@ gem 'sqlite3'
 
 gem 'gravatar_image_tag'
 gem 'will_paginate', '3.0.pre2'
+gem 'acts-as-taggable-on'
 
 group :development do
   gem 'faker'
