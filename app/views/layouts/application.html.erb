@@ -3,7 +3,15 @@
 <head>
   <title><%= title %></title>
   <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag 'jquery.min', 'rails', 'application', 'custom', 'jquery.lazyload' %>
+  <%= javascript_include_tag 'jquery.min', 
+                             'rails', 
+                             'application', 
+                             'custom', 
+                             'jquery.lazyload',
+                             'syntaxhighlighter/scripts/shCore', 
+                             'syntaxhighlighter/scripts/shBrushCpp',
+                             'syntaxhighlighter/scripts/shBrushBash',
+                             'syntaxhighlighter/scripts/shBrushPython' %>
   <%= csrf_meta_tag %>
 </head>
 <body>
@@ -33,6 +41,10 @@
   <footer>
     &copy; 2011 Typedef.me | Powered by Ruby (1.9.2) on Rails (3.0.9)
   </footer>
+
+  <script type="text/javascript">
+    SyntaxHighlighter.all();
+  </script>
 
 </body>
 </html>

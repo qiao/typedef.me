@@ -12,6 +12,7 @@ function hide_comments_of_commentable_id(id) {
 
 /*
 window.onload = function() {
+  SyntaxHighlighter.all();
   $("img").lazyload({
     //effect: "fadeIn"
   })
