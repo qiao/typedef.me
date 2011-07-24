@@ -1,10 +1,22 @@
 <div class="post_title">
   <h2><%= link_to post.title, post_url(post) %></h2>
-
 </div>
 
 <div class="post_info">
-  Posted on <%= post.published_at.strftime("%Y-%m-%d %X") %>
+  <div class="post_date">
+    Posted on <%= post.published_at.strftime("%Y-%m-%d %X") %>
+  </div>
+  <% unless post.tag_list.empty? %>
+    <div class="post_tags">
+      tags: 
+      <% for post_tag in post.tag_list %>
+        <div class="post_tag">
+          <%= link_to post_tag, "/tag/#{post_tag}" %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+  <div class="clear"></div>
 </div>
 
 <div class="post_content">

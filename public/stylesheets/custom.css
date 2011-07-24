@@ -111,6 +111,28 @@ input[type="text"]:focus, textarea:focus {
   font-size: 75%;
 }
 
+.post_date {
+  float:left;
+}
+
+.post_tags {
+  float: right;
+}
+
+.post_tag {
+  display: inline;
+  margin-left: 5px;
+}
+
+.post_tag a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.post_tag a:hover {
+  color: #777;
+}
+
 .post_content, .page_content {
   border-radius: 0 0 5px 5px;
   padding: 5px 20px 5px;

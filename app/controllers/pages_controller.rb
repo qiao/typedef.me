@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def home
     @posts = Post.published.paginate(:page => params[:page],
-                                     :per_page => 10)
+                                     :per_page => 5)
   end
 
   def show
