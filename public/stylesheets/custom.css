@@ -47,6 +47,7 @@ nav ol li a:hover {
 
 body {
   background-image: url("/images/background.jpg");
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h2 {
@@ -55,6 +56,7 @@ h2 {
 
 input[type="text"], textarea {
   border: 1px solid #ddd;
+  font-size: 12px;
 }
 
 input[type="submit"] {
@@ -89,7 +91,7 @@ input[type="text"]:focus, textarea:focus {
   padding: 20px;*/
 }
 
-.post {
+.post, .page {
   margin-top: 30px;
   padding-bottom: 10px;
   border-radius: 5px;
@@ -97,29 +99,29 @@ input[type="text"]:focus, textarea:focus {
   background: #fff;
 }
 
-.post_title {
+.post_title, .page_title {
   background: #555;
   padding: 5px 20px;
   border-radius: 5px 5px 0 0;
 }
 
-.post_info {
+.post_info, .page_info {
   margin: 10px 20px 0;
   color: #aaa;
   font-size: 75%;
 }
 
-.post_content {
+.post_content, .page_content {
   border-radius: 0 0 5px 5px;
   padding: 5px 20px 5px;
 }
 
-.post_title a {
+.post_title a, .page_title a {
   text-decoration: none;
   color: #ddd;
 }
 
-.post_title a:hover {
+.post_title a:hover, .page_title a:hover {
   color: #fff;
 }
 
@@ -216,10 +218,14 @@ input[type="text"]:focus, textarea:focus {
   color: #fff;
 }
 
+.underline {
+  border-bottom: 1px solid #ccc;
+}
+
 footer {
   text-align: center;
   font-size: 80%;
   color: #555;
   width: 740px;  
-  margin: 30px auto 0;
+  margin: 30px auto 15px;
 }

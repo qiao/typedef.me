@@ -1,1 +1,12 @@
-<%= raw page.content %>
+<div class="page_title">
+  <h2><%= link_to page.title, page_url(page) %></h2>
+
+</div>
+
+<div class="page_info">
+  Posted on <%= page.published_at.strftime("%Y-%m-%d %X") %>
+</div>
+
+<div class="page_content">
+  <%= raw escape_codes(page.content) %>
+</div>

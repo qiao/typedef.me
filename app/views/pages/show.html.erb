@@ -1,4 +1,12 @@
-<%= render @page %>
+<% div_for @page do %>
+  <%= render @page %>
 
-<%= render @page.comments %>
-<%= render 'comments/form' %>
+  <div class="comments">
+    <%= render :partial => 'comments/comments',
+               :locals => { :comments => @page.comments,
+                            :commentable_id => @page.id } %>
+    <%= render :partial => 'comments/form',
+               :locals => { :commentable => @page } %>
+  </div>
+
+<% end %>
