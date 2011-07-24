@@ -24,10 +24,15 @@
   <div id="main">
     <%= yield %>
 
+
     <% if Rails.env.development? %>
-      <%= debug(params) %>
+      <% debug(params) %>
     <% end %>
   </div>
+
+  <footer>
+    &copy; 2011 Typedef.me | Powered by Ruby (1.9.2) on Rails (3.0.9)
+  </footer>
 
 </body>
 </html>

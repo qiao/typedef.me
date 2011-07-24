@@ -215,3 +215,11 @@ input[type="text"]:focus, textarea:focus {
 .pagination a:hover {
   color: #fff;
 }
+
+footer {
+  text-align: center;
+  font-size: 80%;
+  color: #555;
+  width: 740px;  
+  margin: 30px auto 0;
+}
