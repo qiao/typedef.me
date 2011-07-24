@@ -188,3 +188,30 @@ input[type="text"]:focus, textarea:focus {
   color: #777;
   margin-bottom: 3px;
 }
+
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pagination a, .pagination em, .disabled {
+  padding: 1px 5px;
+  margin: 0 3px;
+  background: #777;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  color: #ddd;
+}
+
+.pagination em {
+  background: #555;
+}
+
+.disabled {
+  display: none;
+}
+
+.pagination a:hover {
+  color: #fff;
+}
