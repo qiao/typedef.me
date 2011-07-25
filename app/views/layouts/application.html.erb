@@ -42,15 +42,19 @@
   </div>
 
   <footer>
-    &copy; 2011 Typedef.me | Powered by Ruby (1.9.2) on Rails (3.0.9)
+    &copy; 2011 Typedef.me | 
+    Powered by Ruby (<%= RUBY_VERSION %>) on 
+    Rails (<%= Rails::VERSION::STRING %>)
   </footer>
 
   <script type="text/javascript">
     SyntaxHighlighter.all();
+    /*
     $("img").lazyload({
       placeholder: "/images/default_gravatar.png",
       effect: "fadeIn"    
     });
+    */
   </script>
 
 </body>

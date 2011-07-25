@@ -3,7 +3,7 @@
     <div class="gravatar">
       <%= gravatar_for comment %>
       <div class="comment_author">
-        <% if comment.author_url %>
+        <% unless comment.author_url.blank? %>
           <%= link_to comment.author_name, comment.author_url %>
         <% else %>
           <%= comment.author_name %>

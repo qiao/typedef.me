@@ -47,7 +47,8 @@ nav ol li a:hover {
 
 body {
   background-image: url("/images/background.jpg");
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Lucida Grande", "WenQuanYi Micro Hei", "Microsoft Yahei", "Bitstream Vera Sans", Arial, sans-serif;
+  color: #333;
 }
 
 h2 {
@@ -79,8 +80,8 @@ textarea {
 }
 
 input[type="text"]:focus, textarea:focus {
-  border: 1px solid rgba(51, 102, 153, 0.6);
-  box-shadow: 0 0 5px rgba(51, 102, 153, 0.6);
+  border: 1px solid rgba(50, 100, 150, 0.6);
+  box-shadow: 0 0 5px rgba(50, 100, 150, 0.6);
   outline: medium none;
 }
 
@@ -136,6 +137,8 @@ input[type="text"]:focus, textarea:focus {
 .post_content, .page_content {
   border-radius: 0 0 5px 5px;
   padding: 5px 20px 5px;
+  line-height: 1.4em;
+  color: #333;
 }
 
 .post_title a, .page_title a {
@@ -201,9 +204,13 @@ input[type="text"]:focus, textarea:focus {
   list-style-type: none;
 }
 
+.comment_author {
+  font-size: 75%;
+  color: #36a;
+}
+
 .comment_author a {
   color: #36a;
-  font-size: 75%;
   text-decoration: none;
 }
 

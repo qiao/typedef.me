@@ -1,6 +1,10 @@
 <span id="comments_show_link_<%= post.id %>" class="comments_link" 
   onclick="show_comments_of_commentable_id(<%= post.id %>);">
-  <%= post.comments.count %> comments
+  <% if post.comments.empty? %>
+    leave a comment
+  <% else %>
+    <%= post.comments.count %> comments
+  <% end %>
 </span>
 <span id="comments_hide_link_<%= post.id %>" class="comments_link"
   onclick="hide_comments_of_commentable_id(<%= post.id %>);"
@@ -14,5 +18,6 @@
              :locals => { :comments => post.comments,
                           :commentable_id => post.id } %>
 
-    <%= render :partial =>'comments/form', :locals => { :commentable => post } %>
+  <%= render :partial => 'comments/form',
+             :locals => { :commentable => post } %>
 </div>
