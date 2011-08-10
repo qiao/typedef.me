@@ -74,8 +74,8 @@ input[type="submit"]:hover {
   cursor: pointer;
 }
 
-textarea {
-  width: 98%;
+.comments textarea {
+  width: 99%;
   height: 100px;
 }
 
@@ -88,8 +88,6 @@ input[type="text"]:focus, textarea:focus {
 #main {
   width: 740px;
   margin: 0 auto; 
-  /*background-color: #fff;
-  padding: 20px;*/
 }
 
 .post, .page {
@@ -162,7 +160,7 @@ input[type="text"]:focus, textarea:focus {
 } 
 
 .comments {
-  padding-left: 20px;
+  padding: 0 20px;
 }
 
 .comment {
@@ -184,12 +182,12 @@ input[type="text"]:focus, textarea:focus {
 }
 
 .comment_content {
-  width: 600px;
+  width: 590px;
   float: left;
 }
 
 .field {
-  padding: 3px 0 3px;
+  padding: 3px 0;
 }
 
 .clear {
