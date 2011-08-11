@@ -291,12 +291,21 @@ footer {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
+#dashboard a {
+  text-decoration: none;
+}
+
+#dashboard_title {
+  display: inline;
+}
+
 #dashboard table {
   padding-top: 10px;
   border-top: 1px solid #ccc;
   margin-top: 20px;
   width:100%;
 }
+
 
 #login_form {
   width: 400px;
@@ -311,4 +320,9 @@ footer {
 #login_button {
   width: 80px;
   height: 30px;
+}
+
+#logout_button {
+  float: right;
+  margin-right: 10px;
 }

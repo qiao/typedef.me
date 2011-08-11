@@ -1,5 +1,6 @@
 <div id="dashboard">
-  <h2>Dashboard</h2>
+  <h2 id="dashboard_title">Dashboard</h2>
+  <%= link_to 'logout', logout_url, :id => "logout_button" %>
   <table>
     <h3>Posts<h3>
     <tr>
@@ -49,4 +50,5 @@
       </tr>
     <% end %>
   </table>
+
 </div>
