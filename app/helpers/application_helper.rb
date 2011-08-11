@@ -3,24 +3,21 @@ module ApplicationHelper
     'Typedef.me'
   end
 
-  #def escape_codes(text)
-    #text.scan(/<pre.+?>(.+?)<\/pre>/m).each do |match|
-      #text.gsub!(match[0], h(match[0])) 
-    #end
-    #text
-  #end
-
   def markdown(text)
     options = [:hard_wrap, :filter_html, :autolink, :no_intraemphasis, 
                :fenced_code, :gh_blockcode]
     syntax_highlighter(Redcarpet.new(text, *options).to_html).html_safe
   end
 
-  def syntax_highlighter(html)
-    doc = Nokogiri::HTML(html)
-    doc.search("//pre[@lang]").each do |pre|
-      pre.replace Albino.colorize(pre.text.rstrip, pre[:lang])
+  def syntax_highlighter(text)
+    pre_pattern = /<pre lang.+?\/pre>/m
+    separate_pattern = /<pre lang=\"(.+?)\">\W?<code>(.+?)<\/code>\W?<\/pre>/m
+
+    text.scan(pre_pattern).each do |pre_match|
+      pre_match.scan(separate_pattern).each do |match|
+        text.gsub!(pre_match, Albino.colorize(match[1], match[0]))
+      end
     end
-    doc.to_s
+    text
   end
 end
