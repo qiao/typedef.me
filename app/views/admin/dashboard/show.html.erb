@@ -1,21 +1,52 @@
-<h2>Dashboard</h2>
-<table>
-  <tr>
-  	<th>Title</th>
-  	<th>Comments</th>
-  	<th>Published</th>
-    <th>Date</th>
-  </tr>
-  <% @posts.each do |post| %>
+<div id="dashboard">
+  <h2>Dashboard</h2>
+  <table>
+    <h3>Posts<h3>
     <tr>
-      <td><%= link_to post.title, edit_admin_post_url(post) %></td>
-      <td><%= post.comments.count %></td>
-      <td><%= post.published %></td>
-      <td><%= post.created_at.in_time_zone 8 %></td>
-      <td><%= link_to "del", admin_post_url(post), 
-                      :method => :delete, 
-                      :confirm => "Are you sure?"
-        %></td>
+      <th>Title</th>
+      <th>Comments</th>
+      <th>Published</th>
+      <th>Date</th>
+      <th></th>
+      <th></th>
     </tr>
-  <% end %>
-</table>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= link_to post.title, post_url(post) %></td>
+        <td><%= post.comments.count %></td>
+        <td><%= post.published %></td>
+        <td><%= post.created_at.in_time_zone 8 %></td>
+        <td><%= link_to "edit", edit_admin_post_url(post) %></td>
+        <td><%= link_to "del", admin_post_url(post), 
+                        :method => :delete, 
+                        :confirm => "Are you sure?"
+          %></td>
+      </tr>
+    <% end %>
+  </table>
+
+  <table>
+    <h3>Pages<h3>
+    <tr>
+      <th>Title</th>
+      <th>Comments</th>
+      <th>Published</th>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+    </tr>
+    <% @pages.each do |page| %>
+      <tr>
+        <td><%= link_to page.title, page_url(page) %></td>
+        <td><%= page.comments.count %></td>
+        <td><%= page.published %></td>
+        <td><%= page.created_at.in_time_zone 8 %></td>
+        <td><%= link_to "edit", edit_admin_page_url(page) %></td>
+        <td><%= link_to "del", admin_post_url(page), 
+                        :method => :delete, 
+                        :confirm => "Are you sure?"
+          %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>

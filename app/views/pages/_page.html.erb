@@ -1,6 +1,8 @@
 <div class="page_title">
   <h2><%= link_to page.title, page_url(page) %></h2>
-
+  <%if logged_in? %>
+    <%= link_to "[edit]", edit_admin_page_url(page) %>
+  <% end %>
 </div>
 
 <div class="page_info">
@@ -8,5 +10,5 @@
 </div>
 
 <div class="page_content">
-  <%= raw escape_codes(page.content) %>
+  <%= markdown page.content %>
 </div>
