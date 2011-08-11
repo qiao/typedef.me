@@ -42,7 +42,7 @@
         <td><%= page.published %></td>
         <td><%= page.created_at.in_time_zone 8 %></td>
         <td><%= link_to "edit", edit_admin_page_url(page) %></td>
-        <td><%= link_to "del", admin_post_url(page), 
+        <td><%= link_to "del", admin_page_url(page), 
                         :method => :delete, 
                         :confirm => "Are you sure?"
           %></td>
