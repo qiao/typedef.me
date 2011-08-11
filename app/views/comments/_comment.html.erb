@@ -14,7 +14,7 @@
       <div class="comment_info">
         <%= publish_time(comment) %>
       </div>
-      <%= comment.content %>
+      <%= simple_format(comment.content) %>
     </div>
     <div class="clear"></div>
   <% end %>
