@@ -12,7 +12,6 @@ gem 'acts-as-taggable-on'
 
 gem 'redcarpet'
 gem 'albino'
-gem 'nokogiri'
 
 group :development do
   gem 'faker'
