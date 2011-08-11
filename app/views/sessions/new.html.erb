@@ -1,10 +1,11 @@
-<h2>Login</h2>
-<% form_for(:session, :url => session_path) do |f| %>
-  <div class="field">
-    <%= f.label :password %>
-    <%= f.text_field :password %>
-  </div>
-  <div class="field">
-    <%= f.submit 'Sign in' %>
-  </div>
-<% end %>
+<div id="login_form">
+  <h2>Password</h2>
+  <% form_for(:session, :url => session_path) do |f| %>
+    <div class="field">
+      <%= f.text_field :password, :type => 'password' %>
+    </div>
+    <div class="field">
+      <%= f.submit 'Sign in', :id => 'login_button' %>
+    </div>
+  <% end %>
+</div>

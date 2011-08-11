@@ -55,7 +55,7 @@ h2 {
   margin: 0;
 }
 
-input[type="text"], textarea {
+input[type="text"], input[type="password"], textarea {
   border: 1px solid #ddd;
   font-size: 12px;
 }
@@ -79,7 +79,7 @@ input[type="submit"]:hover {
   height: 100px;
 }
 
-input[type="text"]:focus, textarea:focus {
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
   border: 1px solid rgba(50, 100, 150, 0.6);
   box-shadow: 0 0 5px rgba(50, 100, 150, 0.6);
   outline: medium none;
@@ -296,4 +296,19 @@ footer {
   border-top: 1px solid #ccc;
   margin-top: 20px;
   width:100%;
+}
+
+#login_form {
+  width: 400px;
+  margin: 200px auto;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+}
+
+#login_button {
+  width: 80px;
+  height: 30px;
 }
