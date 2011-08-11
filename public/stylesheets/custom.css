@@ -273,3 +273,12 @@ footer {
   width: 740px;  
   margin: 30px auto 15px;
 }
+
+#edit_form {
+  width: 740px;
+  margin: 0 auto;
+}
+
+#edit_form textarea, #edit_form input[type="text"] {
+  width: 98%;
+}

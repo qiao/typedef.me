@@ -12,6 +12,10 @@
       <td><%= post.comments.count %></td>
       <td><%= post.published %></td>
       <td><%= post.created_at.in_time_zone 8 %></td>
+      <td><%= link_to "del", admin_post_url(post), 
+                      :method => :delete, 
+                      :confirm => "Are you sure?"
+        %></td>
     </tr>
   <% end %>
 </table>
