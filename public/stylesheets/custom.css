@@ -51,6 +51,14 @@ body {
   color: #333;
 }
 
+a {
+  color: #888;
+}
+
+a:hover {
+  color: #777;
+}
+
 h2 {
   margin: 0;
 }
