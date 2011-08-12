@@ -4,7 +4,8 @@
   <% if post.comments.empty? %>
     leave a comment
   <% else %>
-    <%= post.comments.count %> comments
+    <% cnt = post.comments.count %> 
+    <%= cnt > 1 ? "#{cnt} comments" : "1 comment" %>
   <% end %>
 </span>
 <span id="comments_hide_link_<%= post.id %>" class="comments_link"
