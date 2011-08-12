@@ -10,7 +10,7 @@ function hide_comments_of_commentable_id(id) {
   $("#comments_show_link_" + id).fadeIn();
 }
 
-$(document).ready(function() {
+$(function() {
   $(".gravatar_image").lazyload({
     placeholder: "/images/default_gravatar.png",
     effect: "fadeIn"
