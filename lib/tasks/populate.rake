@@ -5,14 +5,14 @@ namespace :db do
 
     20.times do |n| 
       Post.create!(:title     => Faker::Lorem.words.join(' '),
-                   :content   => Faker::Lorem.paragraphs(5).join,
+                   :raw_content   => Faker::Lorem.paragraphs(5).join,
                    :published => true,
                    :slug      => Faker::Lorem.words(2).join)
     end
 
     2.times do |n|
       Page.create!(:title     => Faker::Lorem.words.join(' '),
-                   :content   => Faker::Lorem.paragraphs(5).join,
+                   :raw_content   => Faker::Lorem.paragraphs(5).join,
                    :published => true,
                    :slug      => Faker::Lorem.words(2).join)
     end
