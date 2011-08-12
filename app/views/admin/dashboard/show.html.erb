@@ -2,6 +2,7 @@
   <h2 id="dashboard_title">Dashboard</h2>
   <%= link_to 'logout', logout_url, :id => "logout_button" %>
   <h3>Posts</h3>
+  <%= link_to 'new', new_admin_post_url, :id => "new_post_button" %>
   <table>
     <tr>
       <th>Title</th>
@@ -27,6 +28,7 @@
   </table>
 
   <h3>Pages</h3>
+  <%= link_to 'new', new_admin_page_url, :id => "new_page_button" %>
   <table>
     <tr>
       <th>Title</th>
