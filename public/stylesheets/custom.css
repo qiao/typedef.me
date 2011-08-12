@@ -52,11 +52,12 @@ body {
 }
 
 a {
-  color: #888;
+  color: #369;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #777;
+  color: #47a;
 }
 
 h2 {
@@ -165,7 +166,9 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
 }
 
 .comment_icon {
-  margin: 0 5px 0 20px;
+  margin: 0 3px 0 20px;
+  position: relative;
+  top: 2px;
 }
 
 .comments_link {
