@@ -1,3 +1,4 @@
+<%= image_tag 'comments-icon.png', :size => "12x12", :class => "comment_icon" %>
 <span id="comments_show_link_<%= post.id %>" class="comments_link" 
   onclick="show_comments_of_commentable_id(<%= post.id %>);">
   <% if post.comments.empty? %>

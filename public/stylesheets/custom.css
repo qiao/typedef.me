@@ -156,8 +156,11 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
   color: #fff;
 }
 
+.comment_icon {
+  margin: 0 5px 0 20px;
+}
+
 .comments_link {
-  margin-left: 20px;
   color: #369;
   font-size: 75%;
   cursor: pointer;
