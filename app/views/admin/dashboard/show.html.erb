@@ -1,9 +1,12 @@
 <div id="dashboard">
   <h2 id="dashboard_title">Dashboard</h2>
   <%= link_to 'logout', logout_url, :id => "logout_button" %>
-  <h3>Posts</h3>
-  <%= link_to 'new', new_admin_post_url, :id => "new_post_button" %>
   <table>
+    <caption>
+      <h3>Posts</h3>
+      <%= link_to 'new', new_admin_post_url, :id => "new_post_button" %>
+      <div class="clear"></div>
+    </caption>
     <tr>
       <th>Title</th>
       <th>Comments</th>
@@ -27,9 +30,12 @@
     <% end %>
   </table>
 
-  <h3>Pages</h3>
-  <%= link_to 'new', new_admin_page_url, :id => "new_page_button" %>
   <table>
+    <caption>
+      <h3>Pages</h3>
+      <%= link_to 'new', new_admin_page_url, :id => "new_page_button" %>
+      <div class="clear"></div>
+    </caption>
     <tr>
       <th>Title</th>
       <th>Comments</th>
