@@ -2,18 +2,24 @@
              :remote => true, 
              :html => { :id => "new_comment_#{commentable.id}" }) do |f| %>
   <div class="field">
-    <%= f.text_field :author_name, :placeholder => "Name (required)" %>
+    <%= f.text_field :author_name, 
+                     :placeholder => "Name (required)", 
+                     :id => nil %>
   </div>
   <div class="field">
-    <%= f.text_field :author_email, :placeholder => "Email (required)" %>
+    <%= f.text_field :author_email, 
+                     :placeholder => "Email (required)", 
+                     :id => nil %>
   </div>
   <div class="field">
-    <%= f.text_field :author_url, :placeholder => "Website" %>
+    <%= f.text_field :author_url, 
+                     :placeholder => "Website",
+                     :id => nil %>
   </div>
   <div class="field">
-    <%= f.text_area :content %>
+    <%= f.text_area :content, :id => nil %>
   </div>
   <div class="actions">
-    <%= f.submit 'Submit' %> 
+    <%= f.submit 'Submit', :id => nil %> 
   </div>
 <% end %>
