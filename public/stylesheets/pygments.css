@@ -12,6 +12,7 @@ div.highlight pre {
   margin: 0;
   overflow: auto;
   padding: 5px 10px;
+  font-family: "Bitstream Vera Sans Mono", monospace;
 }
 
 .highlight .hll { background-color: #ffffcc }
