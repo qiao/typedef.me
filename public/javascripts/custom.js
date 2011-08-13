@@ -24,5 +24,12 @@ $(function() {
     else
       return "_blank";
   });
-
+  
+  // show edit button only on hover
+  $(".post_edit_button").hide();
+  $(".post_title").mouseover(function() {
+    $(".post_edit_button", $(this)).show();
+  }).mouseout(function() {
+    $(".post_edit_button", $(this)).hide();
+  });
 });

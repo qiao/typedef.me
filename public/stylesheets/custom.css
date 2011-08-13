@@ -38,7 +38,7 @@ nav ol li a {
   padding: 3px 5px;
   margin-left: 5px;
   border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
 nav ol li a:hover {
@@ -90,7 +90,7 @@ input[type="submit"]:hover {
 
 input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
   border: 1px solid rgba(50, 100, 150, 0.6);
-  box-shadow: 0 0 5px rgba(50, 100, 150, 0.6);
+  box-shadow: 0px 0px 5px rgba(50, 100, 150, 0.6);
   outline: medium none;
 }
 
@@ -103,7 +103,7 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
   margin-top: 30px;
   padding-bottom: 10px;
   border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   background: #fff;
 }
 
@@ -199,8 +199,7 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
 
 .gravatar_image {
   border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  size: 32px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 }
 
 .comment_content {
@@ -257,7 +256,7 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
   border: 1px solid rgba(0, 0, 0, 0.3);
   text-decoration: none;
   color: #333;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   font-size: 12px;
 }
 
@@ -302,7 +301,7 @@ footer {
   margin: 0 auto;
   background: #fff;
   padding: 20px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
 #dashboard a {
@@ -338,7 +337,7 @@ footer {
   margin: 200px auto;
   background: #fff;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   text-align: center;
 }

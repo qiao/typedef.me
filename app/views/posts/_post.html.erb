@@ -1,7 +1,8 @@
 <div class="post_title">
   <h2><%= link_to post.title, post_url(post) %></h2>
   <% if logged_in? %>
-    <%= link_to "[edit]", edit_admin_post_url(post) %>
+    <%= link_to "[edit]", edit_admin_post_url(post), 
+                :class => "post_edit_button" %>
   <% end %>
 </div>
 
