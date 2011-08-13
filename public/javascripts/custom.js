@@ -1,15 +1,3 @@
-function show_comments_of_commentable_id(id) {
-  $("#comments_" + id).slideDown();
-  $("#comments_show_link_" + id).hide();
-  $("#comments_hide_link_" + id).fadeIn();
-}
-
-function hide_comments_of_commentable_id(id) {
-  $("#comments_" + id).slideUp();
-  $("#comments_hide_link_" + id).hide();
-  $("#comments_show_link_" + id).fadeIn();
-}
-
 $(function() {
   // lazyload gravatar images
   $(".gravatar_image").lazyload({
@@ -27,9 +15,23 @@ $(function() {
   
   // show edit button only on hover
   $(".post_edit_button").hide();
-  $(".post_title").mouseover(function() {
+  $(".post_title").hover(function() {
     $(".post_edit_button", $(this)).show();
-  }).mouseout(function() {
+  }, function() {
     $(".post_edit_button", $(this)).hide();
+  });
+
+  // toggle visibility of post comments
+  $(".comments_toggle_button").toggle(function() {
+    $(this).data("original_text", $(this).text())
+           .hide()
+           .text("hide comments")
+           .fadeIn()
+           .next().slideDown();
+  }, function() {
+    $(this).hide()
+           .text($(this).data("original_text"))
+           .fadeIn()
+           .next().slideUp();
   });
 });

@@ -1,17 +1,12 @@
 <%= image_tag 'comments-icon.png', :size => "12x12", :class => "comment_icon" %>
-<span id="comments_show_link_<%= post.id %>" class="comments_link" 
-  onclick="show_comments_of_commentable_id(<%= post.id %>);">
+
+<span class="comments_toggle_button">
   <% if post.comments.empty? %>
     leave a comment
   <% else %>
     <% cnt = post.comments.count %> 
     <%= cnt > 1 ? "#{cnt} comments" : "1 comment" %>
   <% end %>
-</span>
-<span id="comments_hide_link_<%= post.id %>" class="comments_link"
-  onclick="hide_comments_of_commentable_id(<%= post.id %>);"
-  style="display: none;">
-  hide comments
 </span>
 
 <div id="comments_<%= post.id %>" class="comments" style="display: none;">
