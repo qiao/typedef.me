@@ -1,2 +1,6 @@
-$("#comments_list_<%= @commentable.id %>").append("<%= escape_javascript(render(@comment)) %>");
-$("#new_comment_<%= @commentable.id %>")[0].reset();
+(function($) {
+  $comment = $("<%= escape_javascript(render(@comment)) %>").hide();
+  $("#comments_list_<%= @commentable.id %>").append($comment);
+  $comment.slideDown();
+  $("#new_comment_<%= @commentable.id %>")[0].reset();
+})(jQuery);
