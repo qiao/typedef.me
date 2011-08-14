@@ -15,7 +15,7 @@ class Comment < ActiveRecord::Base
   def format_url
     unless self.author_url.blank?
       self.author_url.strip!
-      unless (@author_url =~ /\w+:\/\//) == 0
+      unless (self.author_url =~ /\w+:\/\//) == 0
         self.author_url = "http://#{self.author_url}" 
       end
     end
