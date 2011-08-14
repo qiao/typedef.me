@@ -64,6 +64,10 @@ h2 {
   margin: 0;
 }
 
+pre {
+  margin: 0;
+}
+
 input[type="text"], input[type="password"], textarea {
   border: 1px solid #ddd;
   font-size: 12px;
@@ -157,6 +161,12 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
   font-size: 14px;
 }
 
+.post_content img, .page_content img {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
 .post_title a, .page_title a {
   text-decoration: none;
   color: #ddd;
@@ -215,6 +225,11 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
 
 .field {
   padding: 3px 0;
+}
+
+.field label {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .clear {

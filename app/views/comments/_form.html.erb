@@ -3,18 +3,18 @@
              :html => { :id => "new_comment_#{commentable.id}" }) do |f| %>
   <div class="field">
     <%= f.text_field :author_name, 
-                     :placeholder => "Name (required)", 
                      :id => nil %>
+    <%= f.label "Name (required)"%>
   </div>
   <div class="field">
     <%= f.text_field :author_email, 
-                     :placeholder => "Email (required)", 
                      :id => nil %>
+    <%= f.label "Email (required)"%>
   </div>
   <div class="field">
     <%= f.text_field :author_url, 
-                     :placeholder => "Website",
                      :id => nil %>
+    <%= f.label "Website"%>
   </div>
   <div class="field">
     <%= f.text_area :content, :id => nil %>
