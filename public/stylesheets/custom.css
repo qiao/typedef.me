@@ -48,7 +48,6 @@ nav ol li a:hover {
 body {
   background-image: url("/images/background.jpg");
   font-family: "Lucida Grande", "WenQuanYi Micro Hei", "Microsoft Yahei", "Bitstream Vera Sans", Arial, sans-serif;
-  font-size: 14px;
   color: #333;
 }
 
@@ -207,6 +206,7 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
 .comment_content {
   width: 590px;
   float: left;
+  font-size: 14px;
 }
 
 .comment_content p {
