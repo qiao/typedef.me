@@ -10,8 +10,8 @@ gem 'gravatar_image_tag'
 gem 'will_paginate', '3.0.pre2'
 gem 'acts-as-taggable-on'
 
-gem 'redcarpet'
-gem 'albino'
+gem 'redcarpet', '1.17.2'
+gem 'albino', '1.3.3'
 gem 'nokogiri'
 
 group :development do
