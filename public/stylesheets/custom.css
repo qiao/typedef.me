@@ -60,10 +60,6 @@ a:hover {
   color: #47a;
 }
 
-h2 {
-  margin: 0;
-}
-
 pre {
   margin: 0;
 }
@@ -119,6 +115,7 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
 
 .post_title h2, .page_title h2 {
   display: inline;
+  margin: 0;
 }
 
 .post_title a, .page_title a {
