@@ -11,4 +11,5 @@ It's currently in a very early stage and lots of functionalities are to be imple
         $ sudo easy_install pygments
 
     make sure the following command generates a proper output
+
         $ echo "puts 'hello, world'" | pygmentize -l ruby -f html
