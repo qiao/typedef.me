@@ -16,37 +16,39 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-  <header>
-    <h1><%= link_to title, root_url %></h1>
-    <nav>
-      <ol>
-        <% Page.published.each do |page| %>
+  <div id="wrapper">
+    <header>
+      <h1><%= link_to title, root_url %></h1>
+      <nav>
+        <ol>
+          <% Page.published.each do |page| %>
+            <li>
+              <%= link_to page.slug, page_url(page) %>
+            </li>
+          <% end %>
           <li>
-            <%= link_to page.slug, page_url(page) %>
-          </li>
-        <% end %>
-        <li>
-          <%= link_to 'feed', feed_url %>
-        <li>
-      </ol>
-    </nav>
-  </header>
-  <div class="clear"></div>
+            <%= link_to 'feed', feed_url %>
+          <li>
+        </ol>
+      </nav>
+    </header>
+    <div class="clear"></div>
 
-  <div id="main">
-    <%= yield %>
+    <div id="main">
+      <%= yield %>
 
 
-    <% if Rails.env.development? %>
-      <% debug(params) %>
-    <% end %>
+      <% if Rails.env.development? %>
+        <% debug(params) %>
+      <% end %>
+    </div>
+
+    <footer>
+      &copy; 2011 Typedef.me | 
+      Powered by Ruby (<%= RUBY_VERSION %>) on 
+      Rails (<%= Rails::VERSION::STRING %>)
+    </footer>
   </div>
-
-  <footer>
-    &copy; 2011 Typedef.me | 
-    Powered by Ruby (<%= RUBY_VERSION %>) on 
-    Rails (<%= Rails::VERSION::STRING %>)
-  </footer>
 
 </body>
 </html>

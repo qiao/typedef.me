@@ -1,7 +1,6 @@
-header {
+#wrapper {
   width: 740px;
   margin: 0 auto;
-  border-radius: 0 0 5px 5px;
 }
 
 header h1 {
@@ -94,11 +93,6 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
   border: 1px solid rgba(50, 100, 150, 0.6);
   box-shadow: 0px 0px 5px rgba(50, 100, 150, 0.6);
   outline: medium none;
-}
-
-#main {
-  width: 740px;
-  margin: 0 auto; 
 }
 
 .post, .page {
@@ -299,12 +293,11 @@ footer {
   text-align: center;
   font-size: 80%;
   color: #555;
-  width: 740px;  
   margin: 30px auto 15px;
 }
 
 #edit_form {
-  width: 740px;
+  width: 100%;
   margin: 0 auto;
 }
 

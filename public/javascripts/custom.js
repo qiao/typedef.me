@@ -4,7 +4,7 @@
 
     // forbid IE 6
     if($.browser.msie && $.browser.version == "6.0") {
-      window.location = "forbid_ie6.html";
+      window.location = "forbid_ie6";
     }
 
     // lazyload gravatar images
