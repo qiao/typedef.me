@@ -13,7 +13,7 @@ class PostsController < ApplicationController
   def feed
     @posts = Post.published
     @title = 'typedef.me'
-    @updated = @posts.first.published_at unless @posts.empty?
+    @updated = @posts.first.created_at unless @posts.empty?
 
     respond_to do |format|
       format.atom { render :layout => false }

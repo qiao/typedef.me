@@ -1,6 +1,12 @@
 (function($) {
 
   $(function() {
+
+    // forbid IE 6
+    if($.browser.msie && $.browser.version == "6.0") {
+      window.location = "forbid_ie6.html";
+    }
+
     // lazyload gravatar images
     $(".gravatar_image").lazyload({
       placeholder: "/images/default_gravatar.png",

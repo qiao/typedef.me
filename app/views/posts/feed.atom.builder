@@ -9,7 +9,7 @@ atom_feed :language => 'en-US' do |feed|
       entry.url post_url(post)
       entry.title post.title
       entry.content post.content, :type => 'html'
-      entry.updated post.updated_at.strftime("%Y-%m-%dT%H:%M:%SZ")
+      entry.updated post.created_at.strftime("%Y-%m-%dT%H:%M:%SZ")
     end
   end
 end
