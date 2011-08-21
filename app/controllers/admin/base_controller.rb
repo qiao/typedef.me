@@ -4,6 +4,6 @@ class Admin::BaseController < ApplicationController
   before_filter :authenticate
 
   def authenticate
-    redirect_to '/login' unless session[:logged_in]
+    redirect_to login_url unless session[:logged_in]
   end
 end

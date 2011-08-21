@@ -1,6 +1,10 @@
 class PostsController < ApplicationController
   def show
     @commentable = @post = Post.find_by_slug(params[:slug])
+    unless @post
+      redirect_to '/404'
+    end
+    @title = @post.title
   end
 
   def index_by_tag

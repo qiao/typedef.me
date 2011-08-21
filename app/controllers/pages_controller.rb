@@ -9,5 +9,6 @@ class PagesController < ApplicationController
     unless @commentable
       redirect_to '/404'
     end
+    @title = @page.title
   end
 end

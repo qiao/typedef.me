@@ -18,7 +18,7 @@
 <body>
   <div id="wrapper">
     <header>
-      <h1><%= link_to title, root_url %></h1>
+      <h1><%= link_to APP_CONFIG['base_title'], root_url %></h1>
       <nav>
         <ol>
           <% Page.published.each do |page| %>

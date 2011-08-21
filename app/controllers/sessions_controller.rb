@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
   layout 'login'
 
   def new
+    @title = 'Login'
   end
 
   def create
