@@ -6,7 +6,6 @@ TypedefMe::Application.routes.draw do
   match 'logout', :to => 'sessions#destroy'
   match 'admin',  :to => 'admin/dashboard#show'
   match 'feed',   :to => 'posts#feed',
-                  :as => :feed,
                   :defaults => { :format => 'atom' }
 
   resource :session

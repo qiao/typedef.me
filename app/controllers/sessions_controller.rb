@@ -5,17 +5,17 @@ class SessionsController < ApplicationController
   end
 
   def create
-    if params[:session][:password] == '123456' then
+    if params[:session][:password] == APP_CONFIG['password'] then
       session[:logged_in] = true
-      redirect_to admin_path
+      redirect_to admin_url
     else
       flash[:error] = 'Wrong password'
-      redirect_to '/login'
+      redirect_to login_url
     end
   end
 
   def destroy
     reset_session
-    redirect_to root_path
+    redirect_to root_url
   end
 end
