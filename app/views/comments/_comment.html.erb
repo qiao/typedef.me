@@ -12,7 +12,7 @@
     </div>
     <div class="comment_content">
       <div class="comment_info">
-        <%= publish_time(comment) %>
+        <%= comment.created_at.strftime('%Y-%m-%d %X') %>
       </div>
       <%= simple_format(comment.content) %>
     </div>

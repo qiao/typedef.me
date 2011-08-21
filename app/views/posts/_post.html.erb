@@ -1,14 +1,14 @@
 <div class="post_title">
   <h2><%= link_to post.title, post_url(post) %></h2>
   <% if logged_in? %>
-    <%= link_to "[edit]", edit_admin_post_url(post), 
-                :class => "post_edit_button" %>
+    <%= link_to '[edit]', edit_admin_post_url(post), 
+                :class => 'post_edit_button' %>
   <% end %>
 </div>
 
 <div class="post_info">
   <div class="post_date">
-    Posted on <%= post.published_at.strftime("%Y-%m-%d %X") %>
+    Posted on <%= post.created_at.strftime('%Y-%m-%d %X') %>
   </div>
   <% unless post.tag_list.empty? %>
     <div class="post_tags">
