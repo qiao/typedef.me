@@ -23,7 +23,7 @@ TypedefMe::Application.routes.draw do
     get ':year/:month/:day/:slug' => 'posts#show'
   end
 
-  get 'tag/:post_tag' => 'posts#show_by_tag'
+  get 'tag/:post_tag' => 'posts#index_by_tag'
 
   get ':slug' => 'pages#show'
 
