@@ -5,11 +5,7 @@
     window.location = "forbid_ie6";
   }
 
-})(jQuery);
-
-
-(function($) {
-
+  // document ready
   $(function() {
 
     // lazyload gravatar images
