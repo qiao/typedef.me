@@ -6,7 +6,7 @@
 </div>
 
 <div class="page_info">
-  Posted on <%= page.created_at.strftime('%Y-%m-%d %X') %>
+  Posted on <%= page.created_at.to_s(:db) %>
 </div>
 
 <div class="page_content">
