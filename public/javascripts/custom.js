@@ -1,11 +1,16 @@
 (function($) {
 
-  $(function() {
+  // forbid IE 6
+  if($.browser.msie && $.browser.version == "6.0") {
+    window.location = "forbid_ie6";
+  }
 
-    // forbid IE 6
-    if($.browser.msie && $.browser.version == "6.0") {
-      window.location = "forbid_ie6";
-    }
+})(jQuery);
+
+
+(function($) {
+
+  $(function() {
 
     // lazyload gravatar images
     $(".gravatar_image").lazyload({

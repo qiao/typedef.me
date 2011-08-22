@@ -4,8 +4,7 @@
   <% if post.comments.empty? %>
     leave a comment
   <% else %>
-    <% cnt = post.comments.count %> 
-    <%= cnt > 1 ? "#{cnt} comments" : "1 comment" %>
+    <%= pluralize post.comments.count, 'comment' %>
   <% end %>
 </span>
 
