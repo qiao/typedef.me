@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   end
 
   def show
-    @commentable = @page = Page.find_by_slug(params[:slug])
+    @page = Page.find_by_slug(params[:slug])
     unless @commentable
       redirect_to '/404'
     end
