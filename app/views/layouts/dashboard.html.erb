@@ -9,12 +9,14 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+  <div id="wrapper">
 
-<%= yield %>
+    <%= yield %>
 
-<% if Rails.env.development? %>
-  <%= debug(params) %>
-<% end %>
+    <% if Rails.env.development? %>
+      <%= debug(params) %>
+    <% end %>
 
+  </div>
 </body>
 </html>
