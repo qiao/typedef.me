@@ -305,7 +305,7 @@ footer {
   width: 98%;
 }
 
-#dashboard {
+#dashboard_wrapper {
   width: 900px;
   margin: 0 auto;
   background: #fff;
