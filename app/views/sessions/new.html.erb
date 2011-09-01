@@ -2,7 +2,7 @@
   <h2>Password</h2>
   <% form_for(:session, :url => session_path) do |f| %>
     <div class="field">
-      <%= f.text_field :password, :type => 'password' %>
+      <%= f.password_field :password %>
     </div>
     <div class="field">
       <%= f.submit 'Sign in', :id => 'login_button' %>
