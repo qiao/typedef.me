@@ -1,4 +1,6 @@
 class Commentable < ActiveRecord::Base
+  include MarkdownWithSyntax
+
   has_many :comments, :dependent => :destroy
 
   before_save :update_content
@@ -15,32 +17,6 @@ class Commentable < ActiveRecord::Base
 
   private
   def update_content
-    self.content = markdown(self.raw_content) 
+    self.content = markdown_with_syntax(self.raw_content) 
   end
-
-  def markdown(text)
-    options = [:hard_wrap, :autolink, :no_intraemphasis, 
-               :fenced_code, :gh_blockcode]
-    syntax_highlighter(Redcarpet.new(text, *options).to_html).html_safe
-  end
-
-  def syntax_highlighter(text)
-    #pre_pattern = /<pre lang.+?\/pre>/m
-    #separate_pattern = /<pre lang=\"(.+?)\">\W?<code>(.+?)<\/code>\W?<\/pre>/m
-
-    #text.scan(pre_pattern).each do |pre_match|
-      #pre_match.scan(separate_pattern).each do |match|
-        #text.gsub!(pre_match, Albino.colorize(match[1], match[0]))
-      #end
-    #end
-    #text
-
-    doc = Nokogiri::HTML(text)
-    doc.search("//pre[@lang]").each do |pre|
-      pre.replace Albino.colorize(pre.text.rstrip, pre[:lang])
-    end
-
-    (doc.to_s.scan /<body>(.+?)<\/body>/m)[0][0]
-  end
-
 end

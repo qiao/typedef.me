@@ -1,15 +1,16 @@
 class Comment < ActiveRecord::Base
+  include MarkdownWithSyntax
+
   belongs_to :commentable, :polymorphic => true
 
-  before_save :format_url
+  before_save :format_url, :update_content
 
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
   validates :author_name,  :presence => true,
                            :length   => { :maximum => 50 }
   validates :author_email, :presence => true
-#                           :format   => { :with => email_regex }
-  validates :content,      :presence => true
+  validates :raw_content,  :presence => true
 
   private
   def format_url
@@ -19,5 +20,9 @@ class Comment < ActiveRecord::Base
         self.author_url = "http://#{self.author_url}" 
       end
     end
+  end
+
+  def update_content
+    self.content = markdown_with_syntax(self.raw_content) 
   end
 end

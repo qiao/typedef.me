@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110812134439) do
+ActiveRecord::Schema.define(:version => 20110919051040) do
 
   create_table "commentables", :force => true do |t|
     t.string   "title"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(:version => 20110812134439) do
     t.string   "commentable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "raw_content"
   end
 
   create_table "taggings", :force => true do |t|

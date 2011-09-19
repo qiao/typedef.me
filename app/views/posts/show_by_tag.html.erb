@@ -1,9 +1,0 @@
-<% for post in @posts %>
-
-  <%= div_for post do %>
-    <%= render post %>
-    <%= render :partial => 'comments/hidden_comments', :locals => { :post => post } %>
-
-  <% end %>
-<% end %>
-<%= will_paginate @posts %>
