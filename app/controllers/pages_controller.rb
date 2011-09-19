@@ -6,7 +6,7 @@ class PagesController < ApplicationController
 
   def show
     @page = Page.find_by_slug(params[:slug])
-    unless @commentable
+    unless @page
       redirect_to '/404'
     end
     @title = @page.title
