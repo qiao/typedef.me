@@ -1,12 +1,12 @@
 module MarkdownWithSyntax
-  def markdown_with_syntax(text, *options)
-    html = syntax_highlight(markdown(text, *options)).html_safe
+  def markdown_with_syntax(text)
+    syntax_highlight(markdown(text)).html_safe
   end
 
-  def markdown(text, *options)
+  def markdown(text)
     defaults = [:hard_wrap, :autolink, :no_intraemphasis, 
                 :fenced_code, :gh_blockcode]
-    Redcarpet.new(text, *(defaults | options)).to_html
+    Redcarpet.new(text, *defaults).to_html
   end
 
   def syntax_highlight(text)

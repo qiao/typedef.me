@@ -14,7 +14,7 @@
       <div class="comment_info">
         <%= comment.created_at.to_s(:db) %>
       </div>
-      <%= simple_format(comment.content) %>
+      <%= raw(comment.content) %>
     </div>
     <div class="clear"></div>
   <% end %>
