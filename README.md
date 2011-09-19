@@ -1,12 +1,13 @@
-# Typedef.me
+Typedef.me
+==========
 
-## Introduction
+## Introduction ##
 
 This is the engine being used on my blog at http://typedef.me
 
 It's currently in a very early stage and lots of functionalities are to be implemented.
 
-## Dependencies
+## Dependencies ##
 
 *   pygments
 
@@ -15,3 +16,7 @@ It's currently in a very early stage and lots of functionalities are to be imple
     make sure the following command generates a proper output
 
         $ echo "puts 'hello, world'" | pygmentize -l ruby -f html
+
+## Configuration ##
+
+The main config file is `config/config.yml`, which contains the site name and admin password
