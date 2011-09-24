@@ -2,6 +2,11 @@
              :remote => true, 
              :html => { :id => "new_comment_#{commentable.id}" }) do |f| %>
   <div class="field">
+    <%= text_field_tag :spam, 
+                       nil,
+                       :style => 'display:none;' %> 
+  </div>
+  <div class="field">
     <%= f.text_field :author_name, 
                      :id => nil %>
     <%= f.label :author_name, 'Name (required)' %>

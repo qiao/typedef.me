@@ -2,6 +2,8 @@ class CommentsController < ApplicationController
   before_filter :find_commentable
 
   def create
+    return unless params[:spam].blank?
+
     @comment = @commentable.comments.new(params[:comment])
     @comment.user_agent = request.user_agent
 
@@ -18,7 +20,6 @@ class CommentsController < ApplicationController
         format.js
       end
     end
-
   end
   
   private
